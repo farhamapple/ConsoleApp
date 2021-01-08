@@ -105,12 +105,71 @@ void main(List<String> arguments) {
   print(say_postional_default_parameter("Jony", "Hello",  "Farham"));
 
   print(luas_segiempat_arrow_function(12, 10));
-
+  print("============================");
   Function f;
   f = luas_segiempat;
   print(f(6.0, 3.0));
-
+  print("============================");
   print(doMathOperation(1, 2, (a, b) => a * b));
+  print("============================");
+  List<int> myList = [];
+  List<int> list = [1, 2, 3];
 
+  for(int index = 0; index < list.length; index += 1){
+    print(list[index]);
+  }
+  print("============================");
+  for(int bilangan in list){
+    print(bilangan);
+  }
+  print("============================");
+  list.forEach((bilangan) {
+    print(bilangan);
+  });
 
+  print("============================");
+  myList.add(10);
+  myList.addAll(list);
+  myList.insert(1, 20);
+  myList.insertAll(3, [30, 40, 20]);
+  // myList.remove(20);
+  // myList.removeRange(1, 4);
+  //myList.removeWhere((number) => number % 2 != 0);
+  if(myList.contains(10)){
+    print('ada No 10');
+  }
+  list = myList.sublist(4);
+  myList.sort((a, b) => b - a);
+
+  if(myList.every((number) => number % 2 != 0)){
+    print('Semua Ganjil');
+  }else{
+    print('Tidak semua ganjil');
+  }
+
+  list.forEach((bilangan) {
+    print(bilangan);
+  });
+
+  print("============================");
+  List<int> myList2 = [1, 1, 4, 5, 6,7, 5];
+  Set<int> s;
+  s = myList2.toSet();
+
+  s.forEach((bilangan) {
+    print(bilangan);
+  });
+
+  print("============================");
+  List<String> listString = [];
+
+  myList2.forEach((bilangan) {
+     listString.add("Angka " + bilangan.toString());
+  });
+
+  myList2.map((bilangan) => "Angka from Map : "+ bilangan.toString());
+
+  listString.forEach((str) {
+      print(str);
+  });
 }
